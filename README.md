@@ -24,3 +24,8 @@ A 3D game developed using **Godot 4**, created by following structured tutorials
 
 - Characters & Animations
   https://www.mixamo.com/
+
+---
+## Disclaimer
+
+- All assets and addons are credited to their respective owners and are used in accordance with their respective licenses. This project does not claim ownership over any third-party assets or resources.
