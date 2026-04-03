@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dotusie4uqart"]
+
+[ext_resource type="PackedScene" uid="uid://d0uatvvxeuo1e" path="res://assets/brackeys_3d_game_assets/building/floor_wood.glb" id="1_1e7jd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kasi8"]
+size = Vector3(4, 0.2, 4)
+
+[node name="nested_woodenFloor" type="StaticBody3D" unique_id=505735949]
+
+[node name="floor_wood" parent="." unique_id=621527655 instance=ExtResource("1_1e7jd")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=891334818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7881393e-07, -0.10000001, -1.7881393e-07)
+shape = SubResource("BoxShape3D_kasi8")

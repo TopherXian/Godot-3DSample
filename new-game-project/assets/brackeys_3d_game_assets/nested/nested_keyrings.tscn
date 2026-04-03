@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dacwd8ikjwnd1"]
+
+[ext_resource type="PackedScene" uid="uid://dbdnjxg361afn" path="res://assets/brackeys_3d_game_assets/props/props/keyring.glb" id="1_qcrnc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_55tx8"]
+size = Vector3(1.1, 0.5, 1.2)
+
+[node name="nested_keyrings" type="StaticBody3D" unique_id=1513539526]
+
+[node name="keyring2" parent="." unique_id=1508178050 instance=ExtResource("1_qcrnc")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1870477130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050000012, 0.25, -0.100000024)
+shape = SubResource("BoxShape3D_55tx8")

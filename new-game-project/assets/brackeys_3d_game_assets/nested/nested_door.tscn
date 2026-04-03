@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dfjt3emipls6t"]
+
+[ext_resource type="PackedScene" uid="uid://bdv4idsq4kqro" path="res://assets/brackeys_3d_game_assets/building/wall_doorway.glb" id="1_cfbbu"]
+[ext_resource type="Script" uid="uid://rqb10nn6g61l" path="res://assets/brackeys_3d_game_assets/props/scripts/area_door.gd" id="2_qm06s"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qm06s"]
+points = PackedVector3Array(2, 4, 0.49999997, 2, 0, 0.49999997, 2, 4, -0.49999997, -2, 4, 0.49999997, 2, 0, -0.49999997, -2, 0, 0.49999997, -2, 4, -0.49999997, -2, 0, -0.49999997)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qm06s"]
+size = Vector3(2.7, 2.5, 2.5)
+
+[node name="nested_door" type="StaticBody3D" unique_id=1908955900]
+
+[node name="wall_doorway2" parent="." unique_id=1029040321 instance=ExtResource("1_cfbbu")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1101034842]
+shape = SubResource("ConvexPolygonShape3D_qm06s")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1300833898]
+script = ExtResource("2_qm06s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1470814150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049999982, 1.25, -0.15000004)
+shape = SubResource("BoxShape3D_qm06s")

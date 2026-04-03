@@ -1,0 +1,372 @@
+[gd_scene format=3 uid="uid://mgp02mkor0at"]
+
+[ext_resource type="Script" uid="uid://fufru8j1ha6q" path="res://world/script/world.gd" id="1_3ljsx"]
+[ext_resource type="PackedScene" uid="uid://cqdv6hmr6ccys" path="res://assets/brackeys_3d_game_assets/nested/nested_stone_floor.tscn" id="1_4717r"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_tcf2h"]
+[ext_resource type="PackedScene" uid="uid://dotusie4uqart" path="res://assets/brackeys_3d_game_assets/nested/nested_wooden_floor.tscn" id="2_4papg"]
+[ext_resource type="Script" uid="uid://brgf8lm5nq4ny" path="res://world/script/navigation_region_3d.gd" id="2_gi7ib"]
+[ext_resource type="PackedScene" uid="uid://bjcsdbsbfc61y" path="res://assets/brackeys_3d_game_assets/props/props/banner_mounted.glb" id="2_tcf2h"]
+[ext_resource type="PackedScene" uid="uid://epb57vu2o1em" path="res://assets/brackeys_3d_game_assets/nested/nested_pillar.tscn" id="4_dqqhb"]
+[ext_resource type="PackedScene" uid="uid://cfbgwqkv1yp8v" path="res://assets/brackeys_3d_game_assets/nested/nested_cratesStacked.tscn" id="5_b2suy"]
+[ext_resource type="PackedScene" uid="uid://di1sqgtrkg7be" path="res://assets/brackeys_3d_game_assets/nested/nested_wall.tscn" id="7_ai45w"]
+[ext_resource type="PackedScene" uid="uid://cr41hyg2de1vw" path="res://assets/brackeys_3d_game_assets/nested/nested_wall_corner.tscn" id="8_4papg"]
+[ext_resource type="PackedScene" uid="uid://bckhgi60ewla2" path="res://assets/brackeys_3d_game_assets/nested/nested_arched_window.tscn" id="9_ov2xu"]
+[ext_resource type="PackedScene" uid="uid://t2v7bk0tw82c" path="res://assets/brackeys_3d_game_assets/nested/nested_half_wall.tscn" id="10_mad0u"]
+[ext_resource type="PackedScene" uid="uid://dfjt3emipls6t" path="res://assets/brackeys_3d_game_assets/nested/nested_door.tscn" id="11_ocfjn"]
+[ext_resource type="PackedScene" uid="uid://cappwg1mddo8q" path="res://assets/brackeys_3d_game_assets/nested/nested_windowClosed.tscn" id="12_mad0u"]
+[ext_resource type="PackedScene" uid="uid://50kj1jmc00y0" path="res://assets/brackeys_3d_game_assets/nested/nested_torch.tscn" id="14_aysyn"]
+[ext_resource type="PackedScene" uid="uid://cpryqfiaspf8a" path="res://assets/brackeys_3d_game_assets/nested/nested_wall_shelf.tscn" id="15_3ljsx"]
+[ext_resource type="PackedScene" uid="uid://bebyriex8kvj" path="res://assets/brackeys_3d_game_assets/nested/nested_coins.tscn" id="19_aysyn"]
+[ext_resource type="PackedScene" uid="uid://dacwd8ikjwnd1" path="res://assets/brackeys_3d_game_assets/nested/nested_keyrings.tscn" id="20_aysyn"]
+[ext_resource type="PackedScene" uid="uid://c5ibul4tdx5k5" path="res://assets/brackeys_3d_game_assets/nested/nested_chair.tscn" id="20_o1net"]
+[ext_resource type="PackedScene" uid="uid://dwaujpxsrht4x" path="res://assets/brackeys_3d_game_assets/nested/nested_keg.tscn" id="21_3ljsx"]
+[ext_resource type="PackedScene" uid="uid://eaeh82tumhie" path="res://assets/brackeys_3d_game_assets/nested/nested_food.tscn" id="21_aysyn"]
+[ext_resource type="PackedScene" uid="uid://b12oh2nlimcxk" path="res://assets/brackeys_3d_game_assets/nested/nested_sword_shield.tscn" id="21_gi7ib"]
+[ext_resource type="PackedScene" uid="uid://13qenpt4mvxs" path="res://assets/brackeys_3d_game_assets/nested/nested_table.tscn" id="21_o1net"]
+[ext_resource type="PackedScene" uid="uid://by4v7bqg7tox4" path="res://characters/enemy/zombie_2/zombie.tscn" id="22_o1net"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4xowi"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+energy_multiplier = 1.9
+
+[sub_resource type="Sky" id="Sky_a202f"]
+sky_material = SubResource("ProceduralSkyMaterial_4xowi")
+
+[sub_resource type="Environment" id="Environment_noarx"]
+background_mode = 2
+sky = SubResource("Sky_a202f")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_o1net"]
+vertices = PackedVector3Array(3.8999991, 4.9, -8.094418, 3.8999991, 4.9, -6.0944176, 5.649999, 4.9, -7.8444176, 0.1499992, 4.9, 17.155582, -0.1000008, 4.9, 7.6555824, -0.1000008, 4.9, 18.905582, 1.6499991, 4.9, 18.655582, 14.65, 4.9, -0.5944176, 13.15, 4.9, -0.09441757, 16.9, 4.9, -0.09441757, 14.9, 4.9, -0.5944176, 14.9, 4.9, -8.094418, 13.15, 4.9, -7.8444176, 18.9, 4.9, 18.905582, 18.65, 4.9, 17.155582, 17.15, 4.9, 18.655582, 14.65, 4.9, -6.3444176, 18.9, 4.9, -0.09441757, 18.65, 4.9, 1.6555824, 13.9, 0.9, -7.8444176, 14.65, 0.9, -6.8444176, 14.65, 0.9, -7.8444176, 4.899999, 0.9, -2.5944176, 5.149999, 0.9, -1.3444176, 6.649999, 0.9, -1.0944176, 6.149999, 0.9, -6.8444176, 4.899999, 0.9, -5.5944176, 12.4, 0.9, -1.3444176, 13.65, 0.9, -1.3444176, 13.65, 0.9, -5.8444176, 12.65, 0.9, -6.8444176, 12.15, 0.9, -0.09441757, 6.649999, 0.9, -0.09441757, 4.149999, 4.9, -0.5944176, 4.149999, 4.9, -2.0944176, 3.6499991, 4.9, -0.34441757, -0.1000008, 4.9, -0.34441757, -0.1000008, 4.9, 5.6555824, 0.1499992, 4.9, 1.4055824, 1.6499991, 4.9, -0.09441757, 5.649999, 4.9, -0.09441757, 0.1499992, 0.9, -0.09441757, 0.1499992, 0.9, 0.9055824, 1.1499991, 0.9, 0.15558243, 1.1499991, 0.9, 1.9055824, 1.1499991, 0.9, 2.9055824, 1.6499991, 0.9, 2.4055824, 16.9, 0.9, 12.905582, 16.9, 0.9, 13.905582, 17.65, 0.9, 13.905582, 17.4, 0.9, 1.9055824, 2.1499991, 0.9, 0.9055824, 3.6499991, 0.9, 2.4055824, 6.399999, 0.9, 0.9055824, 4.399999, 0.9, 5.1555824, 8.9, 0.9, 9.655582, 10.15, 0.9, 9.655582, 12.4, 0.9, 0.9055824, 15.9, 0.9, 12.155582, 4.399999, 0.9, 3.6555824, 10.65, 0.9, 10.155582, 10.65, 0.9, 11.655582, 14.15, 0.9, 12.655582, 16.4, 0.9, 0.9055824, 17.4, 0.9, -0.09441757, 18.65, 0.9, 1.1555824, 18.4, 0.9, -0.09441757, 2.3999991, 0.9, 5.9055824, 1.1499991, 0.9, 4.6555824, 1.1499991, 0.9, 9.905582, 2.6499991, 0.9, 9.905582, 3.6499991, 0.9, 5.9055824, 2.8999991, 0.9, 11.155582, 7.899999, 0.9, 10.405582, 7.899999, 0.9, 11.155582, 1.1499991, 2.9, 10.905582, 1.1499991, 2.9, 14.155582, 1.8999991, 2.9, 14.155582, 1.8999991, 2.9, 10.905582, 1.1499991, 0.9, 11.155582, 1.1499991, 0.9, 13.905582, 1.6499991, 0.9, 13.905582, 1.6499991, 0.9, 11.155582, 2.8999991, 0.9, 14.905582, 1.1499991, 0.9, 15.155582, 1.1499991, 0.9, 16.655582, 2.1499991, 0.9, 17.655582, 8.15, 0.9, 17.655582, 8.15, 0.9, 11.905582, 14.65, 0.9, 16.655582, 14.4, 0.9, 15.905582, 13.65, 0.9, 15.655582, 16.9, 0.9, 15.655582, 17.65, 0.9, 16.655582, 8.65, 0.9, 12.405582, 16.4, 0.9, 16.405582, 16.65, 0.9, 17.655582, 10.15, 0.9, 12.405582, 13.65, 0.9, 12.905582, 0.1499992, 0.9, 17.655582, 0.1499992, 0.9, 18.655582, 1.1499991, 0.9, 18.655582, 17.65, 0.9, 18.405582, 18.65, 0.9, 18.655582, 18.65, 0.9, 17.655582)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(7, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(12, 2, 11), PackedInt32Array(11, 2, 0), PackedInt32Array(15, 14, 13), PackedInt32Array(16, 12, 11), PackedInt32Array(7, 16, 10), PackedInt32Array(10, 16, 11), PackedInt32Array(15, 13, 6), PackedInt32Array(6, 13, 5), PackedInt32Array(14, 18, 13), PackedInt32Array(13, 18, 17), PackedInt32Array(9, 10, 17), PackedInt32Array(18, 9, 17), PackedInt32Array(21, 20, 19), PackedInt32Array(22, 24, 23), PackedInt32Array(22, 26, 25), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 30), PackedInt32Array(22, 25, 24), PackedInt32Array(24, 25, 31), PackedInt32Array(31, 25, 27), PackedInt32Array(27, 25, 30), PackedInt32Array(31, 32, 24), PackedInt32Array(34, 33, 35), PackedInt32Array(38, 37, 36), PackedInt32Array(39, 38, 36), PackedInt32Array(35, 33, 40), PackedInt32Array(36, 35, 39), PackedInt32Array(39, 35, 40), PackedInt32Array(43, 42, 41), PackedInt32Array(46, 45, 44), PackedInt32Array(48, 47, 49), PackedInt32Array(49, 47, 50), PackedInt32Array(44, 51, 46), PackedInt32Array(46, 51, 52), PackedInt32Array(52, 51, 53), PackedInt32Array(56, 55, 54), PackedInt32Array(53, 57, 54), PackedInt32Array(54, 57, 56), PackedInt32Array(56, 57, 50), PackedInt32Array(56, 50, 58), PackedInt32Array(59, 52, 53), PackedInt32Array(62, 61, 60), PackedInt32Array(54, 59, 53), PackedInt32Array(60, 56, 62), PackedInt32Array(62, 56, 58), PackedInt32Array(57, 63, 50), PackedInt32Array(31, 57, 32), PackedInt32Array(32, 57, 53), PackedInt32Array(50, 47, 58), PackedInt32Array(66, 65, 64), PackedInt32Array(70, 69, 67), PackedInt32Array(67, 69, 68), PackedInt32Array(71, 54, 70), PackedInt32Array(70, 54, 72), PackedInt32Array(72, 54, 73), PackedInt32Array(73, 54, 55), PackedInt32Array(70, 67, 71), PackedInt32Array(73, 74, 72), PackedInt32Array(78, 77, 75), PackedInt32Array(75, 77, 76), PackedInt32Array(82, 81, 79), PackedInt32Array(79, 81, 80), PackedInt32Array(85, 84, 86), PackedInt32Array(86, 84, 83), PackedInt32Array(86, 83, 87), PackedInt32Array(74, 88, 72), PackedInt32Array(72, 88, 83), PackedInt32Array(83, 88, 87), PackedInt32Array(91, 90, 89), PackedInt32Array(48, 49, 92), PackedInt32Array(92, 49, 93), PackedInt32Array(94, 87, 88), PackedInt32Array(92, 93, 95), PackedInt32Array(95, 93, 96), PackedInt32Array(97, 91, 94), PackedInt32Array(94, 91, 89), PackedInt32Array(94, 89, 87), PackedInt32Array(95, 96, 89), PackedInt32Array(89, 96, 87), PackedInt32Array(61, 62, 98), PackedInt32Array(61, 98, 97), PackedInt32Array(97, 98, 91), PackedInt32Array(101, 100, 99), PackedInt32Array(104, 103, 102)]
+geometry_parsed_geometry_type = 1
+agent_max_climb = 0.0
+agent_max_slope = 0.03
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ljsx"]
+bg_color = Color(1, 0, 0.29803923, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gi7ib"]
+bg_color = Color(0, 0.52271163, 0.33947226, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[node name="World" type="Node3D" unique_id=1347192997]
+script = ExtResource("1_3ljsx")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1706200808]
+environment = SubResource("Environment_noarx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1803423008]
+transform = Transform3D(0.635221, -0.28073928, -0.7194997, 0.75702685, 0.04179167, 0.6520459, -0.1529858, -0.9588738, 0.23907411, -7.7000003, 3.2, 0)
+shadow_enabled = true
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1069129655]
+navigation_mesh = SubResource("NavigationMesh_o1net")
+
+[node name="Objectives" type="Node3D" parent="NavigationRegion3D" unique_id=868318367]
+
+[node name="Spawner" type="Node3D" parent="NavigationRegion3D" unique_id=529719528]
+script = ExtResource("2_gi7ib")
+zombie_scene = ExtResource("22_o1net")
+coin_scene = ExtResource("19_aysyn")
+
+[node name="Enemies" type="Node3D" parent="NavigationRegion3D" unique_id=1988826463]
+
+[node name="Walls" type="CSGCombiner3D" parent="NavigationRegion3D" unique_id=619303110]
+use_collision = true
+
+[node name="nested_wall" parent="NavigationRegion3D/Walls" unique_id=1925796558 instance=ExtResource("7_ai45w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.100000046, 0.6, 3.9)
+
+[node name="nested_wall2" parent="NavigationRegion3D/Walls" unique_id=495388758 instance=ExtResource("7_ai45w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8999999, 0.6, -0.09999981)
+
+[node name="nested_wallCorner" parent="NavigationRegion3D/Walls" unique_id=843181253 instance=ExtResource("8_4papg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.1, 0.6, -0.10000008)
+
+[node name="nested_wallCorner5" parent="NavigationRegion3D/Walls" unique_id=1743768535 instance=ExtResource("8_4papg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.9, 0.6, -7.9000006)
+
+[node name="nested_wallCorner6" parent="NavigationRegion3D/Walls" unique_id=1079541110 instance=ExtResource("8_4papg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.866667, 0.6, -7.9000006)
+
+[node name="nested_wall3" parent="NavigationRegion3D/Walls" unique_id=1023499732 instance=ExtResource("7_ai45w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.766666, 0.6, -0.099999785)
+
+[node name="nested_wallCorner2" parent="NavigationRegion3D/Walls" unique_id=1292063182 instance=ExtResource("8_4papg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.766666, 0.6, -0.099999666)
+
+[node name="nested_wall5" parent="NavigationRegion3D/Walls" unique_id=1534988319 instance=ExtResource("7_ai45w")]
+transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 18.766666, 0.6, 14.866668)
+
+[node name="nested_wall6" parent="NavigationRegion3D/Walls" unique_id=394682868 instance=ExtResource("7_ai45w")]
+transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 14.766666, 0.6, 18.866669)
+
+[node name="nested_wallCorner3" parent="NavigationRegion3D/Walls" unique_id=1332969835 instance=ExtResource("8_4papg")]
+transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 18.766666, 0.6, 18.866669)
+
+[node name="nested_wall7" parent="NavigationRegion3D/Walls" unique_id=802232244 instance=ExtResource("7_ai45w")]
+transform = Transform3D(-1, 0, 1.0331603e-07, 0, 1, 0, -1.0331603e-07, 0, -1, 3.9000006, 0.6, 18.866669)
+
+[node name="nested_wall8" parent="NavigationRegion3D/Walls" unique_id=1625856887 instance=ExtResource("7_ai45w")]
+transform = Transform3D(1.6292068e-07, 0, 1, 0, 1, 0, -1, 0, 1.6292068e-07, -0.1000005, 0.6, 14.866668)
+
+[node name="nested_wallCorner4" parent="NavigationRegion3D/Walls" unique_id=1663354521 instance=ExtResource("8_4papg")]
+transform = Transform3D(-1, 0, 1.0331603e-07, 0, 1, 0, -1.0331603e-07, 0, -1, -0.1000005, 0.6, 18.866669)
+
+[node name="nested_archedWindow" parent="NavigationRegion3D/Walls" unique_id=919036477 instance=ExtResource("9_ov2xu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.099999964, 0.6, 9.6)
+
+[node name="nested_halfWall" parent="NavigationRegion3D/Walls" unique_id=572644055 instance=ExtResource("10_mad0u")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.100000024, 0.6, 5.6)
+
+[node name="nested_halfWall2" parent="NavigationRegion3D/Walls" unique_id=1563773437 instance=ExtResource("10_mad0u")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -0.100000024, 0.6, 13.6)
+
+[node name="nested_archedWindow2" parent="NavigationRegion3D/Walls" unique_id=391370742 instance=ExtResource("9_ov2xu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.800001, 0.6, 9.6)
+
+[node name="nested_halfWall3" parent="NavigationRegion3D/Walls" unique_id=647740525 instance=ExtResource("10_mad0u")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.800001, 0.6, 5.6)
+
+[node name="nested_halfWall4" parent="NavigationRegion3D/Walls" unique_id=150739587 instance=ExtResource("10_mad0u")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 18.800001, 0.6, 13.6)
+
+[node name="nested_halfWall5" parent="NavigationRegion3D/Walls" unique_id=1687158313 instance=ExtResource("10_mad0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.05, 0.6, 18.9)
+
+[node name="nested_halfWall6" parent="NavigationRegion3D/Walls" unique_id=4890965 instance=ExtResource("10_mad0u")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 5.05, 0.6, 18.9)
+
+[node name="nested_door" parent="NavigationRegion3D/Walls" unique_id=1908955900 instance=ExtResource("11_ocfjn")]
+transform = Transform3D(-1, 0, 8.841487e-08, 0, 1, 0, -8.841487e-08, 0, -1, 9.05, 0.6, 18.9)
+
+[node name="nested_halfWall9" parent="NavigationRegion3D/Walls" unique_id=632045463 instance=ExtResource("10_mad0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.200003, 0.6, -7.900001)
+
+[node name="nested_halfWall10" parent="NavigationRegion3D/Walls" unique_id=2025604171 instance=ExtResource("10_mad0u")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 5.200001, 0.6, -7.900001)
+
+[node name="nested_door2" parent="NavigationRegion3D/Walls" unique_id=2112802263 instance=ExtResource("11_ocfjn")]
+transform = Transform3D(-1, 0, 8.841487e-08, 0, 1, 0, -8.841487e-08, 0, -1, 9.200001, 0.6, -7.900001)
+
+[node name="nested_halfWall7" parent="NavigationRegion3D/Walls" unique_id=594220134 instance=ExtResource("10_mad0u")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.867, 0.6, -0.2)
+
+[node name="nested_halfWall8" parent="NavigationRegion3D/Walls" unique_id=1688696429 instance=ExtResource("10_mad0u")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.9, 0.6, -0.20000002)
+
+[node name="nested_windowClosed" parent="NavigationRegion3D/Walls" unique_id=1110852366 instance=ExtResource("12_mad0u")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.867, 0.6, -4.2)
+
+[node name="nested_windowClosed2" parent="NavigationRegion3D/Walls" unique_id=1790454914 instance=ExtResource("12_mad0u")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3.9, 0.6, -4.2)
+
+[node name="nested_windowClosed3" parent="NavigationRegion3D/Walls" unique_id=613735072 instance=ExtResource("12_mad0u")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.867, 0.6, -4.2)
+
+[node name="nested_windowClosed4" parent="NavigationRegion3D/Walls" unique_id=1057512592 instance=ExtResource("12_mad0u")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3.9, 0.6, -4.2)
+
+[node name="nested_wallShelf" parent="NavigationRegion3D/Walls" unique_id=747062916 instance=ExtResource("15_3ljsx")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.767, 0.6, 3.9)
+
+[node name="Floor" type="CSGCombiner3D" parent="NavigationRegion3D" unique_id=619155292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, 0)
+use_collision = true
+
+[node name="nested_stoneFloor" parent="NavigationRegion3D/Floor" unique_id=1429713981 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 1.4000001)
+
+[node name="nested_stoneFloor2" parent="NavigationRegion3D/Floor" unique_id=572273683 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.5, 1.4000001)
+
+[node name="nested_stoneFloor3" parent="NavigationRegion3D/Floor" unique_id=1097744547 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.5, 1.4000001)
+
+[node name="nested_stoneFloor4" parent="NavigationRegion3D/Floor" unique_id=156776485 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0.5, 1.4000001)
+
+[node name="nested_stoneFloor5" parent="NavigationRegion3D/Floor" unique_id=37489068 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4, 0.5, 1.4000001)
+
+[node name="nested_stoneFloor6" parent="NavigationRegion3D/Floor" unique_id=1816328768 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 5.4)
+
+[node name="nested_stoneFloor7" parent="NavigationRegion3D/Floor" unique_id=92588313 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.5, 5.4)
+
+[node name="nested_stoneFloor8" parent="NavigationRegion3D/Floor" unique_id=300645056 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.5, 5.4)
+
+[node name="nested_stoneFloor9" parent="NavigationRegion3D/Floor" unique_id=247250308 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0.5, 5.4)
+
+[node name="nested_stoneFloor10" parent="NavigationRegion3D/Floor" unique_id=1978249223 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4, 0.5, 5.4)
+
+[node name="nested_stoneFloor11" parent="NavigationRegion3D/Floor" unique_id=637655837 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 9.4)
+
+[node name="nested_stoneFloor12" parent="NavigationRegion3D/Floor" unique_id=928095998 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.5, 9.4)
+
+[node name="nested_stoneFloor13" parent="NavigationRegion3D/Floor" unique_id=622594751 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.5, 9.4)
+
+[node name="nested_stoneFloor14" parent="NavigationRegion3D/Floor" unique_id=1501166116 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0.5, 9.4)
+
+[node name="nested_stoneFloor15" parent="NavigationRegion3D/Floor" unique_id=1430137811 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4, 0.5, 9.4)
+
+[node name="nested_stoneFloor16" parent="NavigationRegion3D/Floor" unique_id=975017824 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 13.4)
+
+[node name="nested_stoneFloor17" parent="NavigationRegion3D/Floor" unique_id=183000935 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.5, 13.4)
+
+[node name="nested_stoneFloor18" parent="NavigationRegion3D/Floor" unique_id=301142394 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.5, 13.4)
+
+[node name="nested_stoneFloor19" parent="NavigationRegion3D/Floor" unique_id=819781978 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0.5, 13.4)
+
+[node name="nested_stoneFloor20" parent="NavigationRegion3D/Floor" unique_id=1172341637 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4, 0.5, 13.4)
+
+[node name="nested_stoneFloor21" parent="NavigationRegion3D/Floor" unique_id=1261918573 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 17.4)
+
+[node name="nested_stoneFloor22" parent="NavigationRegion3D/Floor" unique_id=788976828 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.5, 17.4)
+
+[node name="nested_stoneFloor23" parent="NavigationRegion3D/Floor" unique_id=833420705 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.5, 17.4)
+
+[node name="nested_stoneFloor24" parent="NavigationRegion3D/Floor" unique_id=932033111 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0.5, 17.4)
+
+[node name="nested_stoneFloor25" parent="NavigationRegion3D/Floor" unique_id=1338423034 instance=ExtResource("1_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4, 0.5, 17.4)
+
+[node name="Props" type="CSGCombiner3D" parent="NavigationRegion3D" unique_id=1614861962]
+use_collision = true
+
+[node name="nested_pillar" parent="NavigationRegion3D/Props" unique_id=1740828274 instance=ExtResource("4_dqqhb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.400001, 0.6, 11.1)
+
+[node name="nested_cratesStacked" parent="NavigationRegion3D/Props" unique_id=1170094334 instance=ExtResource("5_b2suy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7836483, 0.60000396, 4.1252027)
+
+[node name="banner_mounted" parent="NavigationRegion3D/Props" unique_id=2032797329 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6000001, 0, -0.100000024)
+
+[node name="nested_chair" parent="NavigationRegion3D/Props" unique_id=691932396 instance=ExtResource("20_o1net")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.400001, 0.6, 15.600001)
+
+[node name="nested_keg" parent="NavigationRegion3D/Props" unique_id=538349218 instance=ExtResource("21_3ljsx")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1.4000001, 0.6, 12.6)
+
+[node name="nested_keyrings" parent="NavigationRegion3D/Props" unique_id=1513539526 instance=ExtResource("20_aysyn")]
+transform = Transform3D(0.34202015, 0, -0.9396926, 0, 1, 0, 0.9396926, 0, 0.34202015, 15, 1.6, 13.599999)
+
+[node name="nested_food" parent="NavigationRegion3D/Props" unique_id=1751886398 instance=ExtResource("21_aysyn")]
+transform = Transform3D(0.9848077, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, 0.9848077, 15.3, 1.6, 14.599999)
+
+[node name="nested_swordShield" parent="NavigationRegion3D/Props" unique_id=1157569071 instance=ExtResource("21_gi7ib")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.400002, 2.6000001, 6.6)
+
+[node name="nested_torch" parent="NavigationRegion3D/Props" unique_id=1692028294 instance=ExtResource("14_aysyn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4, 3.2, 16.300001)
+
+[node name="nested_torch3" parent="NavigationRegion3D/Props" unique_id=665816985 instance=ExtResource("14_aysyn")]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 13.5, 3.2, 0.10000116)
+
+[node name="nested_torch2" parent="NavigationRegion3D/Props" unique_id=941884668 instance=ExtResource("14_aysyn")]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 2.4999995, 3.2, 18.6)
+
+[node name="nested_table" parent="NavigationRegion3D/Props" unique_id=20409717 instance=ExtResource("21_o1net")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2, 0.6, 14.2)
+
+[node name="floor_starting" type="CSGCombiner3D" parent="NavigationRegion3D" unique_id=867183166]
+
+[node name="nested_woodenFloor" parent="NavigationRegion3D/floor_starting" unique_id=505735949 instance=ExtResource("2_4papg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.453439, 0.6, -2.594417)
+
+[node name="nested_woodenFloor2" parent="NavigationRegion3D/floor_starting" unique_id=1736572905 instance=ExtResource("2_4papg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.453, 0.6, -2.5939999)
+
+[node name="nested_woodenFloor3" parent="NavigationRegion3D/floor_starting" unique_id=2096703911 instance=ExtResource("2_4papg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.45344, 0.6, -2.594417)
+
+[node name="nested_woodenFloor4" parent="NavigationRegion3D/floor_starting" unique_id=45799964 instance=ExtResource("2_4papg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.453439, 0.6, -6.594417)
+
+[node name="nested_woodenFloor5" parent="NavigationRegion3D/floor_starting" unique_id=1226070979 instance=ExtResource("2_4papg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.45344, 0.6, -6.594417)
+
+[node name="nested_woodenFloor6" parent="NavigationRegion3D/floor_starting" unique_id=872406796 instance=ExtResource("2_4papg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.45344, 0.6, -6.594417)
+
+[node name="UI" type="Control" parent="." unique_id=1604155315]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="UI" unique_id=807265482]
+visible = false
+layout_mode = 0
+offset_left = -461.0
+offset_top = -367.0
+offset_right = 1602.0
+offset_bottom = 1134.0
+color = Color(0.99999994, 0.13470697, 0.15371078, 0.5137255)
+
+[node name="playerHPBar" type="ProgressBar" parent="UI" unique_id=1290913648]
+layout_mode = 1
+offset_right = 349.0
+offset_bottom = 29.0
+theme_override_styles/background = SubResource("StyleBoxFlat_3ljsx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gi7ib")
+value = 80.0
+rounded = true
+
+[node name="Label" type="Label" parent="UI/playerHPBar" unique_id=432728645]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 89.0
+offset_bottom = 26.0
+text = "Player HP:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="UI" unique_id=1666471555]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 894.0
+offset_top = 6.0
+offset_right = 942.0
+offset_bottom = 29.0
+grow_horizontal = 0
+text = "Score:"
+
+[node name="player" parent="." unique_id=2107511192 instance=ExtResource("1_tcf2h")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.400001, 1, -4.6000004)
+
+[connection signal="player_hit" from="player" to="." method="_on_player_player_hit"]

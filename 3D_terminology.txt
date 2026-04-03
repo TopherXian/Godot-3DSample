@@ -1,0 +1,10 @@
+1. Mesh - Shape of the 3D Model
+2. UV Map - 2D representation of Mesh
+3. Texture - Paiting Directly into the Mesh. Results to a UV Map that can be overlayed into the model
+4. Materials - Surface's properties
+5. Rig - Moveable joints
+6. Animation - Animation of the Mesh
+7. Standard Material - preset materials from the engine
+
+
+

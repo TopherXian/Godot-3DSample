@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://13qenpt4mvxs"]
+
+[ext_resource type="PackedScene" uid="uid://cb37kyvs03jcb" path="res://assets/brackeys_3d_game_assets/props/props/table_medium.glb" id="1_6yb2u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6yb2u"]
+size = Vector3(2.1000001, 1, 2)
+
+[node name="nested_table" type="StaticBody3D" unique_id=20409717]
+
+[node name="table_medium" parent="." unique_id=237119648 instance=ExtResource("1_6yb2u")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1647608745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_6yb2u")

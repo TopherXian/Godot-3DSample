@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cappwg1mddo8q"]
+
+[ext_resource type="PackedScene" uid="uid://dqd0qm7ajrbfj" path="res://assets/brackeys_3d_game_assets/building/wall_window_closed.glb" id="1_bgysj"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2l43d"]
+points = PackedVector3Array(2, 4, 0.49990216, 2, 0, 0.49990216, 2, 4, -0.49999997, -2, 4, 0.49990216, 2, 0, -0.49999997, -2, 0, 0.49990216, -2, 4, -0.49999997, -2, 0, -0.49999997)
+
+[node name="nested_windowClosed" type="StaticBody3D" unique_id=1110852366]
+
+[node name="wall_window_closed2" parent="." unique_id=1795801262 instance=ExtResource("1_bgysj")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=217711780]
+shape = SubResource("ConvexPolygonShape3D_2l43d")

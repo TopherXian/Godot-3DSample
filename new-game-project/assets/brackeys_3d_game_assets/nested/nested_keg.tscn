@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dwaujpxsrht4x"]
+
+[ext_resource type="PackedScene" uid="uid://dk5x5abuaoc7b" path="res://assets/brackeys_3d_game_assets/props/props/keg_decorated.glb" id="1_inb11"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r3x6w"]
+size = Vector3(3.9, 2, 1.8000001)
+
+[node name="nested_keg" type="StaticBody3D" unique_id=538349218]
+
+[node name="keg_decorated2" parent="." unique_id=272260617 instance=ExtResource("1_inb11")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=546367023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0000001, 0)
+shape = SubResource("BoxShape3D_r3x6w")

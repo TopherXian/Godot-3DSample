@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://darnw1lwuebtc"]
+
+[ext_resource type="PackedScene" uid="uid://ck2c4kj6el8q0" path="res://assets/brackeys_3d_game_assets/building/wall_arched.glb" id="1_aqcb0"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_urp73"]
+points = PackedVector3Array(1.9999998, 4, 0.5000006, 1.9999998, 0, 0.5000006, 1.9999998, 4, -0.49999997, -2.0000002, 4, 0.49990276, 1.9999998, 0, -0.49999997, -2.0000002, 0, 0.49990276, -2.0000002, 4, -0.49999997, -2.0000002, 0, -0.49999997)
+
+[node name="static_wallArched" type="StaticBody3D" unique_id=186611428]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=695421845]
+shape = SubResource("ConvexPolygonShape3D_urp73")
+
+[node name="wall_arched2" parent="." unique_id=2101692114 instance=ExtResource("1_aqcb0")]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cr41hyg2de1vw"]
+
+[ext_resource type="PackedScene" uid="uid://dabcggkbdl2mn" path="res://assets/brackeys_3d_game_assets/building/wall_corner.glb" id="1_gbxf2"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ak4iq"]
+points = PackedVector3Array(-0.50014687, 3.4498825, 2.000061, -0.250049, 3.1996868, 2.000061, 0.5, 4, 1.9998162, -0.50014687, 4, 1.9998162, -2, 4, 0.4999265, -0.50014687, 0, 2.000061, -0.250049, 0.5, 2.000061, 0.5, 4, -3.6746264e-05, 0.5, 0, 1.9998162, -2, 4, -0.5, -2, 0, 0.4999265, -0.00019574165, 4, -0.5, 0.5, 0, -3.6746264e-05, -2, 0, -0.5, -0.00019574165, 0, -0.5)
+
+[node name="nested_wallCorner" type="StaticBody3D" unique_id=843181253]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=857361895]
+shape = SubResource("ConvexPolygonShape3D_ak4iq")
+
+[node name="wall_corner2" parent="." unique_id=938689002 instance=ExtResource("1_gbxf2")]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://eaeh82tumhie"]
+
+[ext_resource type="PackedScene" uid="uid://5a184umcc0hi" path="res://assets/brackeys_3d_game_assets/props/props/plate_food.glb" id="1_r668h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xcyck"]
+size = Vector3(1, 0.7, 1.1)
+
+[node name="nested_food" type="StaticBody3D" unique_id=1751886398]
+
+[node name="plate_food" parent="." unique_id=2138468937 instance=ExtResource("1_r668h")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1399050477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45000002, -0.050000012)
+shape = SubResource("BoxShape3D_xcyck")

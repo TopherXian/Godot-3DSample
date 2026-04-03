@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://csl380r182j36"]
+
+[ext_resource type="PackedScene" uid="uid://bqi8f6hpkp65r" path="res://characters/enemy/skeleton/skeleton_mage.glb" id="1_rcjer"]
+
+[node name="skeleton_mage" unique_id=473473915 instance=ExtResource("1_rcjer")]

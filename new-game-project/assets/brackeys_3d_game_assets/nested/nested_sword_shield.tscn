@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b12oh2nlimcxk"]
+
+[ext_resource type="PackedScene" uid="uid://mhtl2d5vs7gm" path="res://assets/brackeys_3d_game_assets/props/props/sword_shield.glb" id="1_fr4yb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_14ss1"]
+size = Vector3(2.1000001, 1.7, 0.6)
+
+[node name="nested_swordShield" type="StaticBody3D" unique_id=1157569071]
+
+[node name="sword_shield" parent="." unique_id=1896847396 instance=ExtResource("1_fr4yb")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1760152127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.940697e-08, 0.049999982, 0)
+shape = SubResource("BoxShape3D_14ss1")

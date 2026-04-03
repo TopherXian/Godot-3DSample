@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bckhgi60ewla2"]
+
+[ext_resource type="PackedScene" uid="uid://bxetv1gc2m08b" path="res://assets/brackeys_3d_game_assets/building/wall_archedwindow_gated.glb" id="1_kyjjc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2v4t7"]
+points = PackedVector3Array(2, 4, 0.49999997, 2, 0, 0.49999997, 2, 4, -0.49999997, -2, 4, 0.49999997, 2, 0, -0.49999997, -2, 0, 0.49999997, -2, 4, -0.49999997, -2, 0, -0.49999997)
+
+[node name="nested_archedWindow" type="StaticBody3D" unique_id=919036477]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=240847237]
+shape = SubResource("ConvexPolygonShape3D_2v4t7")
+
+[node name="wall_archedwindow_gated2" parent="." unique_id=1475218428 instance=ExtResource("1_kyjjc")]

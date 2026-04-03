@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://lu7ny6i0p28g"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_e0lcc"]
+radius = 1.0
+
+[node name="Physics Simulated Obj" type="RigidBody3D" unique_id=1059006020]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1580721804]
+shape = SubResource("SphereShape3D_e0lcc")

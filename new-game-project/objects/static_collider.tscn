@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bo5qiw3fnbueo"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_l0as4"]
+radius = 1.7
+
+[node name="Static Collider" type="StaticBody3D" unique_id=428387457]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2114190696]
+shape = SubResource("SphereShape3D_l0as4")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bebyriex8kvj"]
+
+[ext_resource type="PackedScene" uid="uid://d280pspu5a35w" path="res://assets/brackeys_3d_game_assets/props/props/coin_stack.glb" id="1_87wau"]
+[ext_resource type="Script" uid="uid://dyo3xxc33cvgx" path="res://assets/brackeys_3d_game_assets/props/scripts/nested_coins.gd" id="1_yd2h2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yd2h2"]
+size = Vector3(1.5, 1.2, 1.4)
+
+[node name="nested_coins" type="Area3D" unique_id=599523824]
+script = ExtResource("1_yd2h2")
+
+[node name="coin_stack" parent="." unique_id=1214927042 instance=ExtResource("1_87wau")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=786186293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_yd2h2")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

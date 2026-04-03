@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://t2v7bk0tw82c"]
+
+[ext_resource type="PackedScene" uid="uid://b7r0rbaisnyl3" path="res://assets/brackeys_3d_game_assets/building/wall_half_endcap.glb" id="1_jk2ay"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_khe5k"]
+points = PackedVector3Array(-2, 0, -0.49999997, 0, 0, -0.49999997, -2, 0, 0.49990216, -2, 4, -0.49999997, 0, 0, 0.49990216, 0, 4, -0.49999997, -2, 4, 0.49990216, 0, 4, 0.49990216)
+
+[node name="nested_halfWall" type="StaticBody3D" unique_id=572644055]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=787308132]
+shape = SubResource("ConvexPolygonShape3D_khe5k")
+
+[node name="wall_half_endcap2" parent="." unique_id=247699139 instance=ExtResource("1_jk2ay")]
